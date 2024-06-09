@@ -43,7 +43,7 @@ class SLL:
             self.insert_at_start(item)
         else:
             temp = self.start
-            while temp.next is not None:
+            while temp.next:
                 temp = temp.next
 
             temp.next = Node(item)
@@ -52,7 +52,7 @@ class SLL:
 
         temp = self.start
 
-        while temp is not None:
+        while temp:
             if temp.item == item:
                 return temp
             temp = temp.next
@@ -64,7 +64,7 @@ class SLL:
         temp = self.start
         index = 1
 
-        while temp is not None:
+        while temp:
             if temp.item == item:
                 return index
             temp = temp.next
@@ -80,7 +80,7 @@ class SLL:
     def print_list_items(self):
 
         temp = self.start
-        while temp is not None:
+        while temp:
             print(temp.item, end=' ')
             temp = temp.next
         print()
@@ -98,7 +98,7 @@ class SLL:
                 self.start = None
             else:
                 temp = self.start
-                while temp.next.next is not None:
+                while temp.next.next:
                     temp = temp.next
 
                 temp.next = None
